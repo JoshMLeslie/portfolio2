@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExperimentsComponent } from './experiments.component';
-
-
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [ExperimentsComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild([{
+      path: '',
+      component: ExperimentsComponent
+    }])
   ],
-  exports: [ExperimentsComponent]
 })
 export class ExperimentsModule { }
