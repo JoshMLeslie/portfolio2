@@ -1,2 +1,15 @@
-selector
+<!--
+  - the button-bars are positioned abs
+  - the resizing area is an overlay that has its opacity change over time
+-->
+
+<div class='selector-container' [ngClass]="{
+  'selector-landing': url === '',
+  'selector-navigated': url !== ''
+}">
+  <ng-container *ngFor='let bar of bars'>
+    <app-bar-button *ngIf='url !== bar.label' [label]='bar.label'></app-bar-button>
+  </ng-container>
+</div>
+
 <router-outlet></router-outlet>

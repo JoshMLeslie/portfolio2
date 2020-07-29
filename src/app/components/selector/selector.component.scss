@@ -1,0 +1,19 @@
+:host {
+  .selector-container {
+    position: relative;
+    display: flex;
+    transition: height 500ms ease-in-out;
+  }
+  .selector-landing {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .selector-navigated {
+    height: 2rem;
+
+    app-bar-button:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
+}
